@@ -153,7 +153,7 @@ CREATE TABLE Contact (
   gender ENUM('Male', 'Female', 'Other'),
   age INT,
   phone VARCHAR(25) NOT NULL,
-  testResults TEXT NOT NULL,
+  testResults BOOLEAN NOT NULL,
   riskID TEXT,
   PRIMARY KEY (contactID),
   FOREIGN KEY (CTid) REFERENCES ContactTracer (CTid),
