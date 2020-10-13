@@ -5,7 +5,9 @@ CREATE TABLE  HealthDepartment (
     departmentID TEXT NOT NULL,
     address TEXT,
     phone VARCHAR(25),
-    PRIMARY KEY (departmentID)
+    levelID Text,
+    PRIMARY KEY (departmentID),
+    FOREIGN KEY (levelID) REFERENCES DepartmentLevel(levelID)
 );
 
 DROP TABLE IF EXISTS DepartmentLevel;
