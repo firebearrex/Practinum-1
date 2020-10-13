@@ -5,7 +5,7 @@ CREATE TABLE  HealthDepartment (
     departmentID TEXT NOT NULL,
     address TEXT,
     phone VARCHAR(25),
-    levelID Text,
+    levelID INT,
     PRIMARY KEY (departmentID),
     FOREIGN KEY (levelID) REFERENCES DepartmentLevel(levelID)
 );
@@ -156,7 +156,7 @@ CREATE TABLE Contact (
   age INT,
   phone VARCHAR(25) NOT NULL,
   testResults BOOLEAN NOT NULL,
-  riskID TEXT,
+  riskID INT,
   PRIMARY KEY (contactID),
   FOREIGN KEY (CTid) REFERENCES ContactTracer (CTid),
   FOREIGN KEY (riskID) REFERENCES Risk (riskID)
