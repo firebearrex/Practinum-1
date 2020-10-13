@@ -15,7 +15,7 @@ INSERT INTO `Contact` (`contactID`,`CTid`,`notificationTime`,`contactTimeWithPat
 	("rt_16","1A27F66A-EAE5-E545-4871-9B1D501A23D6","09/17/2020","08/02/2020","Cheyenne","Female",35,"668-850-1747","True",2),
 	("mw_27","25B0BD17-706F-15AD-8B82-7D6A2637A96A","09/22/2020","08/18/2020","Dolan","Female",22,"808-392-6328","True",2);
 
-INSERT INTO `Patient` (`patientID`,`identificationTime`,`symptomOnsetTime`,`name`,`gender`,`age`,`phone`,`interviewTime`, 'PIid') VALUES 
+INSERT INTO `Patient` (`patientID`,`identificationTime`,`symptomOnsetTime`,`name`,`gender`,`age`,`phone`,`interviewTime`, `PIid`) VALUES 
 	("1671013093599","08/28/2020","08/05/2020","Marah","Other",61,"168-334-3015","08/30/2020","164304021266"),
 	("1690060623099","09/27/2020","08/22/2020","Randall","Female",79,"253-436-3243","09/01/2020","160211047832"),
 	("1696110349499","09/21/2020","08/03/2020","Gabriel","Male",72,"412-833-5191","09/05/2020","162111028813"),
@@ -50,7 +50,7 @@ INSERT INTO `HealthDepartment` (`departmentID`,`address`,`phone`,`levelID`) VALU
 	("1683081052999","8758 Diam. Avenue","960-379-4840",4),
 	("1673061707799","7480 Nec Road","560-581-9532",1),
 	("1648062424999","576-3061 Cursus Avenue","344-887-2578",3),
-	("1677092812299","3902 Enim. Street","602-939-9425",2),
+	("1677092812299","3902 Enim. Street","602-939-9425",2);
 
 INSERT INTO DepartmentLevel VALUES
 	(1, "state"),
