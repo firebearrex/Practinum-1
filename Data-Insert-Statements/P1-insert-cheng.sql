@@ -46,6 +46,17 @@ INSERT INTO `PatientInterviewer` (`PIid`,`departmentID`,`TAid`) VALUES
 	("160211047832","166905256746","161405287358"),
 	("165405291898","163302248897","168212085362");
 
+INSERT INTO `HealthDepartment` (`departmentID`,`address`,`phone`,`levelID`) VALUES 
+	("1683081052999","8758 Diam. Avenue","960-379-4840",4),
+	("1673061707799","7480 Nec Road","560-581-9532",1),
+	("1648062424999","576-3061 Cursus Avenue","344-887-2578",3),
+	("1677092812299","3902 Enim. Street","602-939-9425",2),
+
+INSERT INTO DepartmentLevel VALUES
+	(1, "state"),
+	(2, "local"),
+	(3, "tribal"),
+	(4, "territorial");
 
 
 # 2523DCD9-BC4C-7B6B-A607-ED1510BEB8B7

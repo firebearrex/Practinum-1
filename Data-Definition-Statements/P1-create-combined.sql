@@ -12,7 +12,7 @@ CREATE TABLE  HealthDepartment (
 
 DROP TABLE IF EXISTS DepartmentLevel;
 CREATE TABLE DepartmentLevel (
-  levelID Text PRIMARY KEY,
+  levelID INT PRIMARY KEY,
   level VARCHAR(255)
 );
 
@@ -164,7 +164,7 @@ CREATE TABLE Contact (
 
 DROP TABLE IF EXISTS Risk;
 CREATE TABLE Risk (
-  riskID TEXT,
+  riskID INT NOT NULL,
   risk VARCHAR(255) NOT NULL UNIQUE,
   PRIMARY KEY (riskID)
 );
