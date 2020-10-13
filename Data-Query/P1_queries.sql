@@ -1,28 +1,28 @@
--- Q1. List the emails of tracers who work at state level health department
+-- Q1. List the emails of tracers who work at tribal level health department
 SELECT Email
 FROM ContactTracer AS CT
 JOIN (SELECT departmentID 
 	FROM HealthDepartment AS HD
 	JOIN DepartmentLevel AS DL ON HD.levelID = DL.levelID
-	WHERE level = "state") AS DI ON CT.departmentID = DI.departmentID;
+	WHERE level = "tribal") AS DI ON CT.departmentID = DI.departmentID;
 
 
--- Q2. list contact IDs who are at high risk and have taken test
+-- Q2. list contact IDs who are at medium risk and have taken test
 SELECT TFC.contactID
 FROM TestForContact as TFC
 JOIN (SELECT Contact.contactID
 	FROM Contact
 	JOIN Risk  ON Risk.riskID=Contact.riskID
-	WHERE risk="high") AS CT 
+	WHERE risk="Medium") AS CT 
 ON CT.contactID=TFC.contactID;
 
 
--- Q3. list the department IDs who has more than 3 Triage Associates
+-- Q3. list the department IDs who has more than 1 Triage Associates
 SELECT HD.departmentID
 FROM HealthDepartment AS HD
 JOIN TriageAssociate AS TA ON HD.departmentID=TA.departmentID
 GROUP BY HD.departmentID
-HAVING COUNT (TAid) > 3;
+HAVING COUNT (TAid) > 1;
 
 
 -- Q4. list the IDs of Patient Interveiwers who has patients aging between 18 to 50 years old
