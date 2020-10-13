@@ -1,7 +1,7 @@
 INSERT INTO Risk VALUES
-	('1', 'Low'),
-	('2', 'Medium'),
-	('3', 'High');
+	(1, 'Low'),
+	(2, 'Medium'),
+	(3, 'High');
 
 INSERT INTO `Contact` (`contactID`,`CTid`,`notificationTime`,`contactTimeWithPatient`,`name`,`gender`,`age`,`phone`,`testResults`,`riskID`) VALUES 
 	("vl_44","427121DF-AD2A-C513-6AA2-E69BC302402B","09/11/2020","08/31/2020","Raymond","Other",79,"004-505-7889","False",3),
