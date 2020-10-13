@@ -154,8 +154,10 @@ CREATE TABLE Contact (
   age INT,
   phone VARCHAR(25) NOT NULL,
   testResults TEXT NOT NULL,
+  riskID TEXT,
   PRIMARY KEY (contactID),
-  FOREIGN KEY (CTid) REFERENCES ContactTracer (CTid)
+  FOREIGN KEY (CTid) REFERENCES ContactTracer (CTid),
+  FOREIGN KEY (riskID) REFERENCES Risk (riskID)
 );
 
 DROP TABLE IF EXISTS Risk;
