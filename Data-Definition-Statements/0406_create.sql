@@ -35,8 +35,8 @@ CREATE TABLE TestCenter (
 DROP TABLE IF EXISTS MobileTestingSites;
 CREATE TABLE MobileTestingSites (
   TCid VARCHAR(255),
-  startDate Date,
-  endDate Date,
+  startDate VARCHAR(255),
+  endDate VARCHAR(255),
   community varchar(255),
   PRIMARY KEY(TCid),
   FOREIGN KEY(TCid)
@@ -91,13 +91,13 @@ CREATE TABLE PatientInterviewer (
 DROP TABLE IF EXISTS Patient;
 CREATE TABLE Patient (
    patientID VARCHAR(255) PRIMARY KEY,
-   identificationTime Date,
-   symptomOnsetTime date,
+   identificationTime VARCHAR(255),
+   symptomOnsetTime VARCHAR(255),
    name VARCHAR(255),
    gender VARCHAR(255),
    age INT,
    phone varchar(25),
-   interviewTime Date,
+   interviewTime VARCHAR(255),
    PIid VARCHAR(255),
    FOREIGN KEY(PIid)
        REFERENCES PatientInterviewer (PIid)
@@ -125,8 +125,8 @@ DROP TABLE IF EXISTS Contact;
 CREATE TABLE Contact (
   contactID VARCHAR(255),
   CTid VARCHAR(255),
-  notificationTime DATE NOT NULL,
-  contactTimeWithPatient DATE NOT NULL,
+  notificationTime VARCHAR(255) NOT NULL,
+  contactTimeWithPatient VARCHAR(255) NOT NULL,
   name VARCHAR(255) NOT NULL,
   gender ENUM('Male', 'Female', 'Other'),
   age INT,
