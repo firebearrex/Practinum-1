@@ -1,4 +1,4 @@
---USE covid_tracing_test;
+#USE covid_tracing_test;
 
 DROP TABLE IF EXISTS DepartmentLevel;
 CREATE TABLE DepartmentLevel (
