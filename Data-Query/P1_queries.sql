@@ -22,7 +22,7 @@ SELECT HD.departmentID
 FROM HealthDepartment AS HD
 JOIN TriageAssociate AS TA ON HD.departmentID=TA.departmentID
 GROUP BY HD.departmentID
-HAVING COUNT (TAid) > 1;
+HAVING COUNT(TAid) > 1;
 
 
 -- Q4. list the IDs of Patient Interveiwers who has patients aging between 18 to 50 years old
@@ -40,7 +40,7 @@ SELECT cityName,
        AVG(countOfContacts) OVER(PARTITION BY CRTS.cityName) AS avgNumberOfTestedContacts,
 	   SUM(countOfContacts) OVER(PARTITION BY CRTS.cityName) AS totalNumberOfTestedContacts
 FROM CityRunTestingSite as CRTS
-JOIN (SELECT COUNT (contactID) countOfContacts, TFC.TCid
+JOIN (SELECT COUNT(contactID) countOfContacts, TFC.TCid
 	FROM TestForContact AS TFC
 	JOIN CityRunTestingSite AS CRTS
 	ON TFC.TCid = CRTS.TCid
