@@ -69,6 +69,7 @@ CREATE TABLE MedicalProvider (
   phone varchar(25),
   PRIMARY KEY (MPid)
 );
+--------------------------
 
 DROP TABLE IF EXISTS NeighborhoodTestSite;
 CREATE TABLE NeighborhoodTestSite (
